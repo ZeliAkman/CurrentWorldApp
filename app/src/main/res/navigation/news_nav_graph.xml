@@ -15,7 +15,11 @@
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.example.cuurentworld.ui.fragment.ArticleFragment"
-        android:label="ArticleFragment" />
+        android:label="ArticleFragment">
+        <argument android:name="article"
+            app:argType="com.example.cuurentworld.models.Article"/>
+
+    </fragment>
     <fragment
         android:id="@+id/headlinesFragment2"
         android:name="com.example.cuurentworld.ui.fragment.HeadlinesFragment"

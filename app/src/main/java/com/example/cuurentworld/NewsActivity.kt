@@ -9,6 +9,7 @@ class NewsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_news)
 
 
+        // Your API key is: db2611256dd545b89d34e3f2bcd420fb
         //Your API key is: db2611256dd545b89d34e3f2bcd420fb
     }
 }
