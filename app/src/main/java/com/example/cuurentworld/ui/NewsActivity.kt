@@ -33,5 +33,6 @@ class NewsActivity : AppCompatActivity() {
         binding.bottomNavigationView.setupWithNavController(navController)
 
 
+
     }
 }
