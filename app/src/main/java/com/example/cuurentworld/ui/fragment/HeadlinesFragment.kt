@@ -25,7 +25,7 @@ import com.example.cuurentworld.util.Resource
 import retrofit2.Response
 
 
-class HeadlinesFragment : Fragment() {
+class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
 
     private lateinit var newsViewModel: NewsViewModel
     private lateinit var binding: FragmentHeadlinesBinding

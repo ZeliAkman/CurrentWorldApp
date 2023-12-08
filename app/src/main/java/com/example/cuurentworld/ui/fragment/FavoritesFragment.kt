@@ -20,7 +20,7 @@ import com.example.cuurentworld.ui.viewmodel.NewsViewModel
 import com.google.android.material.snackbar.Snackbar
 
 
-class FavoritesFragment : Fragment() {
+class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
 
  lateinit var newsViewModel: NewsViewModel
  lateinit var newsAdapter: NewsAdapter
@@ -72,8 +72,9 @@ class FavoritesFragment : Fragment() {
   ItemTouchHelper(itemTouchHelperCallback).apply {
    attachToRecyclerView(binding.recyclerFavourites)
   }
-
-
+  newsViewModel.getFavoriteNews().observe(viewLifecycleOwner,Observer{articles ->
+   newsAdapter.differ.submitList(articles)
+  })
  }
 
  private fun setupFavoritesRecycler(){
