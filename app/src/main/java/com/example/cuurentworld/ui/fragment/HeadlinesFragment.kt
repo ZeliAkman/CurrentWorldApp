@@ -2,11 +2,9 @@ package com.example.cuurentworld.ui.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.provider.SyncStateContract.Constants
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.Button
 import android.widget.TextView
@@ -22,7 +20,7 @@ import com.example.cuurentworld.ui.NewsActivity
 import com.example.cuurentworld.ui.adapter.NewsAdapter
 import com.example.cuurentworld.ui.viewmodel.NewsViewModel
 import com.example.cuurentworld.util.Resource
-import retrofit2.Response
+
 
 
 class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {

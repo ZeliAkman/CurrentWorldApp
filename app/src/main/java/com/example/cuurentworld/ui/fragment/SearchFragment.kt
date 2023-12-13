@@ -2,6 +2,7 @@ package com.example.cuurentworld.ui.fragment
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.AbsListView
@@ -78,7 +79,9 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         }
 
         newsViewModel.searchNews.observe(viewLifecycleOwner, Observer { response ->
+            Log.d("SearchFragment", "Response: ${response}")
             when(response){
+
                 is Resource.Success<*> -> {
                     hideProgressBar()
                     hideErrorMessage()
@@ -94,10 +97,10 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                     }
                 }
                 is Resource.Error<*> ->{
-
                     hideProgressBar()
                     response.message?.let { message ->
-                        Toast.makeText(activity,"Sorry error : $message", Toast.LENGTH_SHORT).show()
+                        Log.e("SearchFragment", "Error: $message")
+                        Toast.makeText(activity,"Sorry error  $message", Toast.LENGTH_SHORT).show()
                         showErrorMessage(message)
                     }
                 }
